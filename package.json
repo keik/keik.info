@@ -25,6 +25,7 @@
     "ect": "^0.5.9",
     "http-server": "^0.8.5",
     "metalsmith": "^2.1.0",
+    "metalsmith-collections": "^0.7.0",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-layouts": "^1.4.2",
     "metalsmith-less": "^2.0.0",
