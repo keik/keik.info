@@ -9,6 +9,9 @@
   <body>
 
     <main class="container">
+      <h1><%- @title %></h1>
+      <div class="date"><%- require('moment')(@date).format('YYYY/MM/DD') %></div>
+
       <%- @contents %>
     </main>
 

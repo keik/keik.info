@@ -5,6 +5,7 @@ var argv = require('minimist')(process.argv.slice(2), {
 var Metalsmith = require('metalsmith'),
     collections = require('metalsmith-collections'),
     drafts = require('metalsmith-drafts'),
+    inplace = require('metalsmith-in-place'),
     layouts = require('metalsmith-layouts'),
     less = require('metalsmith-less'),
     markdown = require('metalsmith-markdown'),
@@ -21,7 +22,6 @@ Metalsmith('./')
   }) : function dummy() {})
   .use(drafts())
   .use(less())
-  .use(metallic())
   .use(collections({
     posts: {
       pattern: 'blog/**/*.md',
@@ -29,9 +29,13 @@ Metalsmith('./')
       limit: 3
     }
   }))
+  .use(inplace({
+    engine: 'ect'
+  }))
+  .use(metallic())
   .use(markdown())
   .use(permalinks({
-    pattern: 'blog/:date/:title',
+    pattern: 'blog/:path',
     date: 'YYYY-MM-DD',
     relative: false
   }))
