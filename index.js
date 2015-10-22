@@ -25,7 +25,8 @@ Metalsmith('./')
   .use(collections({
     posts: {
       pattern: 'blog/**/*.md',
-      sortBy: 'date'
+      sortBy: 'date',
+      limit: 3
     }
   }))
   .use(markdown())

@@ -1,6 +1,7 @@
 ---
 title: a
-date: 2015-10-22
+layout: blog.ect
+date: 2015-10-20
 ---
 
 # a

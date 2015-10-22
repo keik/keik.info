@@ -9,13 +9,19 @@
   <body>
 
     <main class="container">
-      <ul>
-        <% for post in @collections.posts : %>
-        <%- post.contents %>
-        <li><a href="/<%- post.path %>"><%- post.title %></a></li>
-        <% end %>
-      </ul>
+      <%- @contents %>
     </main>
+
+    <nav>
+      <ul>
+      <% if @previous : %>
+        <li><a href="/<%- @previous.path %>"><%- @previous.title %></a></li>
+      <% end %>
+      <% if @next : %>
+        <li><a href="/<%- @next.path %>"><%- @next.title %></a></li>
+      <% end %>
+      </ul>
+    </nav>
 
   </body>
 </html>

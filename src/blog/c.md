@@ -1,5 +1,6 @@
 ---
 title: c
+layout: blog.ect
 date: 2015-10-22
 ---
 
